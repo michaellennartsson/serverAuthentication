@@ -11,7 +11,7 @@ module.exports = function (app) {
         res.send('Hello World!');
     }); */
     app.get('/', requireAuth, (req, res) => {
-        res.send('asddasd');
+        res.send({ message: 'Secret'});
     })
 
     app.post('/signin', requireSignIn, Authentication.signin);
